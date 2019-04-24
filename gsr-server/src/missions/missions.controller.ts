@@ -9,4 +9,9 @@ export class MissionsController {
   getMissions() {
     return this.missionsService.getMissions();
   }
+
+  @Get(':id')
+  getMission(@Param('id') id: number) {
+    return this.missionsService.getMission(id);
+  }
 }
